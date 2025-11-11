@@ -5,14 +5,42 @@
     <title>Document</title>
     <style>
         body {
-            background-color: darkblue;
+            background-color: rgb(16, 1, 68);
         }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;           
+            padding: 10px 20px;             
+        }
+        .units{
+            display: flex;
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+            width: 100px;
+            height: 40px;
+            align-items: center ;
+            margin-left: 10px;
+            padding: 3px 10px; 
+        }
+        .units img{
+            width: 20px;
+            align-items: center;
+        }
+
+        
     </style>
 </head>
 <body>
-    <div>
-        <img src="/weather-app-main/assets/images/logo.svg" alt="">
-        <h1>Weather now</h1>
+    <div class="header-container">
+        <div class="header">
+            <img src="/weather-app-main/assets/images/logo.svg" alt="">
+        </div>
+        <div class="units">
+            <img src="/weather-app-main/assets/images/icon-units.svg" alt="">
+            <h3>Units</h3>
+        </div>
     </div>
     
 </body>

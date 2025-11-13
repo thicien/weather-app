@@ -1,98 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: rgb(7, 0, 33);
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;           
-            padding: 10px 20px;
-            padding-left: 50px;
-                        
-        }
-        .units{
-            display: flex;
-            background-color: black;
-            border-radius: 20px;
-            color: white;
-            width: 100px;
-            height: 40px;
-            align-items: center ;
-            margin-right: 50px;
-            padding: 3px 10px 2px;
-            gap: 10px;
-            padding-right: 10px; 
-        }
-        .units img{
-            width: 20px;
-            align-items: center;
-        }
-        .text{
-            margin-left: 400px;
-            color: white;
-        }
-        .search {
-           background-color: blue;
-           margin-left: 300px; 
-           margin-right: 400px;           
-           height: 50px;
-           border-radius: 15px;
-           padding: 0 0px;             
-           display: flex;               
-           align-items: center;        
-           justify-content: space-between; 
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#070021] text-white font-sans min-h-screen flex flex-col items-center">
+    <header
+      class="w-full flex justify-between items-center px-6 sm:px-10 lg:px-16 py-4">
+      <img src="/weather-app-main/assets/images/logo.svg" alt="Weather Logo" class="w-10 sm:w-12"/>
 
-        .search img {
-           height: 24px;               
-           width: 24px;
-        }
-
-        .search-tab {
-           background-color: rgb(0, 140, 255);
-           color: white;
-           width: 90px;
-           height: 100%;                
-           border-radius: 20px;
-           display: flex;              
-           align-items: center;         
-           justify-content: center;
-        }
-        .today{
-            margin-left: 50px;
-            width: 100px;
-            padding-top: 20px;
-        }
-    
-
-        
-    </style>
-</head>
-<body>
-    <div class="header-container">
-        <div class="header">
-            <img src="/weather-app-main/assets/images/logo.svg" alt="">
+        <div
+          class="flex items-center bg-black text-white rounded-full px-3 py-2 sm:px-4 sm:py-2 gap-2 cursor-pointer hover:bg-gray-800 transition">
+          <img src="/weather-app-main/assets/images/icon-units.svg" alt="Units Icon" class="w-5 h-5" />
+          <h3 class="text-sm sm:text-base font-semibold">Units</h3>
         </div>
-        <div class="units">
-            <img src="/weather-app-main/assets/images/icon-units.svg" alt="">
-            <h3>Units</h3>
-        </div>
-    </div>
-    <div class="text">
-        <h1>How's the sky looking today?</h1>
-    </div>
-    <div class="search">
-        <img src="/weather-app-main/assets/images/icon-search.svg" alt="">
-        <div class="search-tab">Search</div>
-    </div>
-    <div class="today">
-        <img src="/weather-app-main/assets/images/bg-today-large.svg" alt="">
-    </div>
-    
-</body>
+    </header>
+    <section class="text-center mt-8 sm:mt-10">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+        How's the sky looking today?
+      </h1>
+    </section>
+    <section
+      class="flex items-center justify-between bg-blue-600 rounded-xl w-[90%] sm:w-3/4 md:w-1/2 mt-8 px-4 sm:px-6 py-3">
+      <img src="/weather-app-main/assets/images/icon-search.svg" alt="Search Icon" class="w-6 h-6"/>
+        <button class="bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-full px-5 py-2 text-sm sm:text-base transition">
+          Search
+        </button>
+    </section>
+
+        <section class="mt-10 w-[80%] sm:w-[60%] md:w-[40%]">
+          <img src="/weather-app-main/assets/images/bg-today-large.svg" alt="Today's Weather"class="w-full object-contain"/>
+        </section>
+  </body>
 </html>
